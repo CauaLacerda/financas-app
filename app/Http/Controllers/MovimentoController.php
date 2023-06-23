@@ -58,4 +58,9 @@ class MovimentoController extends Controller
         $dado = Movimento::findOrFail($id);
         return view('form_update', ['dado' => $dado]);
     }
+
+    //U do CRUD - atualiza dados 
+    public function update(Request $request){
+        Movimento::findOrFail($request->id)->update($request->all());
+    }
 }

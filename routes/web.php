@@ -39,4 +39,6 @@ Route::middleware([
         return view('nova_entrada');
     })->name('nova_entrada');
     Route::post('/store', [MovimentoController::class, 'store'])->name('store');
+
+    Route::put('/update', [MovimentoController::class, 'update'])->name('update');
 });
