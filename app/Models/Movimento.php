@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Movimento extends Model
 {
     use HasFactory;
+    //campos "autorizados" para modificação
+    protected $fillable = ['descricao', 'valor', 'tipo', 'user_id'];
+
+
+
+
+
     //Inserir aqui o relacionamento entre tabelas
     public function user()
     {

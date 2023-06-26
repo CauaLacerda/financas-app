@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MovimentoController;
+use App\Models\Movimento;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,4 +42,5 @@ Route::middleware([
     Route::post('/store', [MovimentoController::class, 'store'])->name('store');
 
     Route::put('/update', [MovimentoController::class, 'update'])->name('update');
+    Route::delete('/deletar/{id}', [MovimentoController::class, 'deletar'])->name('deletar');
 });

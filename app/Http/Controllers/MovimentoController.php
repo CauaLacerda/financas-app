@@ -62,5 +62,13 @@ class MovimentoController extends Controller
     //U do CRUD - atualiza dados 
     public function update(Request $request){
         Movimento::findOrFail($request->id)->update($request->all());
+        return redirect('dashboard');
+    }
+
+
+    //D do CRUD
+    public function deletar($id){
+        Movimento::findOrFail($id)->delete();
+        return redirect('dashboard');
     }
 }
