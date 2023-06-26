@@ -41,11 +41,16 @@ class MovimentoController extends Controller
         $despesas = Movimento::where('tipo', 'Despesa')->where('user_id', $user)->get();
         //Carrega receitas
         $receitas = Movimento::where('tipo', 'Receita')->where('user_id', $user)->get();
+
+        $totDespesas = Movimento::where('tipo', 'Despesa')->where('user_id', $user)->sum('valor');
+        $totReceitas = Movimento::where('tipo', 'Receita')->where('user_id', $user)->sum('valor');
         
         //Carrega a view passando os dados consultados 
         $dados = [
             'despesas' => $despesas,
             'receitas' => $receitas,
+            'totDespesas' => $totDespesas,
+            'totReceitas' => $totReceitas
 
         ];
 

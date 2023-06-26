@@ -43,6 +43,10 @@
             </p>
         </div>
         @endforeach
+
+        <h3>Total: R$ {{number_format($totReceitas, 2, ',', '.')}}</h3>
+
+
         @endif
 
 
@@ -84,6 +88,10 @@
             </p>
         </div>
         @endforeach
+
+        <h3>Total: R$ {{number_format($totDespesas, 2, ',', '.')}}</h3>
+
+
         @endif
     </div>
 </div>
