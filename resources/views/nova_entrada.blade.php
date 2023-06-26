@@ -16,8 +16,7 @@
 
         <p class="mt-5">
             <label for="valor">Valor:</label><br>
-            <input type="number" class="border" name="valor" step="0.01" required
-            value="{{$dado->valor}}">
+            <input type="number" class="border" name="valor" step="0.01" required>
         </p>
 
         <p class="mt-5">

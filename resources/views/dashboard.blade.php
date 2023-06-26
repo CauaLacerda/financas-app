@@ -3,7 +3,7 @@
 @section('conteudo')
 <div>
     <h1 class="text-center text-3xl mb-5 w-full">
-        EXTRATO - SALDO R$ 9.999,00
+        EXTRATO - SALDO R$ {{number_format($totReceitas-$totDespesas, 2, ',', '.')}}
     </h1>
 </div>
 
